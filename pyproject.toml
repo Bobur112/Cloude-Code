@@ -1,0 +1,22 @@
+[project]
+name = "pelengator"
+version = "0.1.0"
+description = "Mobil pelengator (radio yo'nalish aniqlash) apparati uchun dasturiy ta'minot"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+pelengator = "pelengator.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pelengator"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
